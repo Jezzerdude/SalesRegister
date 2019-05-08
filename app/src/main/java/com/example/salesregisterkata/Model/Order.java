@@ -1,34 +1,42 @@
 package com.example.salesregisterkata.Model;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Order {
     private List<Item> items;
-    private double totalBeforeTax;
-    private double totalAfterTax;
-    private double discount;
+    private BigDecimal totalBeforeTax;
+    private BigDecimal tax;
 
-    public Order(List<Item> items, double totalBeforeTax, double discount, double totalAfterTax) {
+    private BigDecimal totalAfterTax;
+    private BigDecimal discount;
+
+    public Order(List<Item> items, BigDecimal totalBeforeTax, BigDecimal discount,
+                 BigDecimal tax, BigDecimal totalAfterTax) {
         this.items = items;
         this.totalBeforeTax = totalBeforeTax;
-        this.totalAfterTax = totalAfterTax;
         this.discount = discount;
+        this.tax = tax;
+        this.totalAfterTax = totalAfterTax;
     }
 
     public List<Item> getItems() {
         return items;
     }
 
-    public double getTotalBeforeTax() {
+    public BigDecimal getTotalBeforeTax() {
         return totalBeforeTax;
     }
 
-
-    public double getTotalAfterTax() {
+    public BigDecimal getTotalAfterTax() {
         return totalAfterTax;
     }
 
-    public double getDiscount() {
+    public BigDecimal getDiscount() {
         return discount;
+    }
+
+    public BigDecimal getTax() {
+        return tax;
     }
 }
