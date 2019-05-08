@@ -6,28 +6,29 @@ public class Order {
     private List<Item> items;
     private double totalBeforeTax;
     private double totalAfterTax;
+    private double discount;
+
+    public Order(List<Item> items, double totalBeforeTax, double discount, double totalAfterTax) {
+        this.items = items;
+        this.totalBeforeTax = totalBeforeTax;
+        this.totalAfterTax = totalAfterTax;
+        this.discount = discount;
+    }
 
     public List<Item> getItems() {
         return items;
-    }
-
-    public void setItems(List<Item> items) {
-        this.items = items;
     }
 
     public double getTotalBeforeTax() {
         return totalBeforeTax;
     }
 
-    public void setTotalBeforeTax(double totalBeforeTax) {
-        this.totalBeforeTax = totalBeforeTax;
-    }
 
     public double getTotalAfterTax() {
         return totalAfterTax;
     }
 
-    public void setTotalAfterTax(double totalAfterTax) {
-        this.totalAfterTax = totalAfterTax;
+    public double getDiscount() {
+        return discount;
     }
 }
