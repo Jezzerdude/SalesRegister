@@ -13,7 +13,7 @@ public enum State {
         this.taxRate = taxRate;
     }
 
-    State getStateFromCode(String stateCode) {
+    public static State getStateFromCode(String stateCode) {
         switch (stateCode.toUpperCase()) {
             case "UT":
                 return UT;
