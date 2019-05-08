@@ -1,0 +1,8 @@
+Suggested Improvements:
+* Maintain a list of orders using a Recyclerview
+* Introduce currency symbols based on locale
+* Unit tests for the presenter with Mockito
+* More thorough unit tests for the engine to test edge case scenarios
+* UI improvements
+* Using DI with Dagger
+* Instrumented Tests
